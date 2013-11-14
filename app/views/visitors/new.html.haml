@@ -1,1 +1,16 @@
-%h3 Home
+%h3 
+  Enter your Registration and Stock Ref to retrieve photos
+
+=form_tag 'search', method: "get" do
+  .form-group
+    %label{:for=>"registration"}
+      Registration No.
+    =text_field_tag 'registration'
+  .form-group
+    %label{:for=>"stock-ref"}
+      Stock Ref
+    =text_field_tag 'stock_ref'
+  %button.btn.btn-default{:type=>"submit"}
+    submit
+
+

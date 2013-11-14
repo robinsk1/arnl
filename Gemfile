@@ -13,10 +13,23 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'thin'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
-  gem 'html2haml'
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+end
+group :test do
+  gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails'
+  gem 'cucumber', '1.2.5' 
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end

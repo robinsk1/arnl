@@ -1,0 +1,6 @@
+%h1
+  ="registration: #{@car.registration} stock-ref: #{@car.stock_ref}"
+
+-@car.image_urls.each do |url|
+  %p
+    =image_tag(url)
